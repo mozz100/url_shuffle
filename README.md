@@ -1,16 +1,15 @@
 Two Ruby scripts to help webmasters.
 
-h3. What problem does this solve?
+What problem does this solve?
+-----------------------------
 
 Our website was getting disorganised with many URLs like these:
 
-<pre>
-/lonestar_distributors
-/detect-chemical-123-with-lonestar
-/lonestar_markets
-/lonestar_industrial
-...
-</pre>
+        /lonestar_distributors
+        /detect-chemical-123-with-lonestar
+        /lonestar_markets
+        /lonestar_industrial
+        ...
 
 I used these two scripts to enable me to rejig the URLs, whilst keeping track of the moves.
 
@@ -20,33 +19,30 @@ Keeping track is important, because it's necessary to:
 - automate the changes to URLs (we use Drupal so this will be easy)
 - place 301 redirects at the old URLs (maintain Google juice and user experience)
 
-h3. How does it solve it?
+How does it solve it?
+---------------------
 
-1. Starts from a list of URLs in a file called @existing_urls.txt@
+1.  Starts from a list of URLs in a file called @existing_urls.txt@
 
-<pre>
-/lonestar_distributors
-/detect-chemical-123-with-lonestar
-/lonestar_markets
-/lonestar_industrial
-...
-</pre>
+        /lonestar_distributors
+        /detect-chemical-123-with-lonestar
+        /lonestar_markets
+        /lonestar_industrial
+        ...
 
-2. Run @generate_folder.rb@ to build a folder of files that mirrors the existing website structure.  See @examples/urls_20121008_142600@
+2.  Run @generate_folder.rb@ to build a folder of files that mirrors the existing website structure.  See @examples/urls_20121008_142600@
 
-3. At this point it's convenient to make a copy of the folder.  You shouldn't need it, but you never know.
+3.  At this point it's convenient to make a copy of the folder.  You shouldn't need it, but you never know.
 
-4. You use Explorer/Finder/whatever you like to move the files around, create subfolders, rename the files.  See @examples/urls_20121008_142600_final@
+4.  You use Explorer/Finder/whatever you like to move the files around, create subfolders, rename the files.  See @examples/urls_20121008_142600_final@
 
-5. Run @generate_redirects.rb@ and enter the name of the folder from step 4.  It outputs @redirects.csv@.  See @examples/redirects.csv@
+5.  Run @generate_redirects.rb@ and enter the name of the folder from step 4.  It outputs @redirects.csv@.  See @examples/redirects.csv@
 
-(spaces added for readability below)
+    (spaces added for readability below)
 
-<pre>
-FROM,                               TO
-/lonestar_distributors,             /lonestar/distributors
-/detect-chemical-123-with-lonestar, /lonestar/apps/detect-chemical-123
-/lonestar_markets,                  /lonestar/markets
-/lonestar_industrial                /lonestar/markets/industrial
-...
-</pre>
+        FROM,                               TO
+        /lonestar_distributors,             /lonestar/distributors
+        /detect-chemical-123-with-lonestar, /lonestar/apps/detect-chemical-123
+        /lonestar_markets,                  /lonestar/markets
+        /lonestar_industrial                /lonestar/markets/industrial
+        ...
