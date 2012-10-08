@@ -22,7 +22,7 @@ Keeping track is important, because it's necessary to:
 How does it solve it?
 ---------------------
 
-1.  Starts from a list of URLs in a file called @existing_urls.txt@
+1.  Starts from a list of URLs in a file called `existing_urls.txt`
 
         /lonestar_distributors
         /detect-chemical-123-with-lonestar
@@ -30,13 +30,13 @@ How does it solve it?
         /lonestar_industrial
         ...
 
-2.  Run @generate_folder.rb@ to build a folder of files that mirrors the existing website structure.  See @examples/urls_20121008_142600@
+2.  Run `generate_folder.rb` to build a folder of files that mirrors the existing website structure.  See `examples/urls_20121008_142600`
 
 3.  At this point it's convenient to make a copy of the folder.  You shouldn't need it, but you never know.
 
-4.  You use Explorer/Finder/whatever you like to move the files around, create subfolders, rename the files.  See @examples/urls_20121008_142600_final@
+4.  You use Explorer/Finder/whatever you like to move the files around, create subfolders, rename the files.  See `examples/urls_20121008_142600_final`
 
-5.  Run @generate_redirects.rb@ and enter the name of the folder from step 4.  It outputs @redirects.csv@.  See @examples/redirects.csv@
+5.  Run `generate_redirects.rb` and enter the name of the folder from step 4.  It outputs `redirects.csv`.  See `examples/redirects.csv`
 
     (spaces added for readability below)
 
