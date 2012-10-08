@@ -1,4 +1,4 @@
-Two Ruby scripts to help webmasters.
+Two Ruby scripts to help webmasters. [See blog post](http://www.rmorrison.net/mnemozzyne/url-shuffling-and-google-juice)
 
 What problem does this solve?
 -----------------------------
