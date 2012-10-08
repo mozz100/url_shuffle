@@ -22,6 +22,17 @@ Keeping track is important, because it's necessary to:
 How does it solve it?
 ---------------------
 
+In short, the first script translates a list of existing URLs (you have to produce the list, for example using Xenu Link Sleuth) into a 
+set of folders and files.
+
+You use Explorer/Finder/whatever you like to rename, move, reorganise into subfolders.  (All the benefits of multiple select,
+navigation, copy/paste, scripts.)
+
+Run the second script and it outputs what you need to do on the website.
+
+More details
+------------
+
 1.  Starts from a list of URLs in a file called `existing_urls.txt`
 
         /lonestar_distributors
@@ -46,3 +57,14 @@ How does it solve it?
         /lonestar_markets,                  /lonestar/markets
         /lonestar_industrial                /lonestar/markets/industrial
         ...
+
+
+Even more details
+-----------------
+
+The scripts treat URLs like `/contact` as you might expect.  It turns it into `/contact.txt`. (I found it helpful to have .txt on the end
+when using Windows to do the dragging/dropping).
+
+For 'index URLs', for example `/news` (when you also have `/news/2012` and `/news/2012/story1`) it creates (and expects) a file at `/news/news.txt`.
+I found this the easiest way to handle the fact that webservers serve an index document from a virtual directory but file systems don't 
+have a corresponding convention.  If your website really does have URLs like `/news/news`, then you'll have to adapt the scripts.
